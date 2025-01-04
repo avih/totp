@@ -120,6 +120,10 @@ base32_decode(uint8_t *inout, size_t len)
 int
 main(int argc, char **argv)
 {
+    if (argc > 1 && argv[1][0] == '-' && argv[1][1] == 'h')
+        return 0 >= printf("Usage: printf SECRET | base32 -d | %s\n"
+                           "       echo   SECRET | %s -b\n", *argv, *argv);
+
     uint8_t h[20];
     uint8_t ki[64 +  8];
     uint8_t ko[64 + 20] = {0};
