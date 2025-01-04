@@ -1,6 +1,9 @@
 // Copyright (c) 2020 by angt <adrien@gallouet.fr>
 // Don't try to reuse the HMAC-SHA1 implementation of this project,
 // you will suffer unproductively :P
+//
+// Latest source code is available at https://github.com/avih/totp
+// which is a fork of https://github.com/angt/totp with support for -b and -h.
 // base32 ignores non-alphabet, doesn't enforce canonical zeros or padding
 
 #include <inttypes.h>
